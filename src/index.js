@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode  >
+    {/* add background color to the whole body */}
     <style>{'body { background-color: #566673; }'}</style>
     <App />
   </React.StrictMode>,

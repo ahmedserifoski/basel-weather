@@ -1,13 +1,9 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import {
-    ApolloClient,
-    InMemoryCache,
-    ApolloProvider
-} from "@apollo/client";
-import Chart from "./chart/Chart";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
-import Overview from "./Pages/Overview";
+import Chart from "./Components/Chart";
+import Overview from "./Components/Overview";
 
 function App() {
     const [weekData, setWeekData] = useState([]);
@@ -30,28 +26,24 @@ function App() {
         fetchWeekData();
     }, []);
 
-
     return (
-      weekData && (
-        <ApolloProvider client={client}>
-          
-            <Overview />
-            <div className='text-center' style={{ width: "100%" }}>
-                <button
-                    className="btn text-light mt-2 mb-2"
-                    onClick={() => {
-                        setChartPress((chartPress) => !chartPress);
-                    }}
-                >
-                    {chartPress ? "Close" : "Open"} Weekly Information
-                </button>
-            </div>
-            <Chart
-                weekData={weekData}
-                chartPress={chartPress}
-            />
-        </ApolloProvider>
-      )
+        weekData && (
+            <ApolloProvider client={client}>
+                <Overview />
+                {/* button could be a component, no time to set up the Context API */}
+                <div className='text-center' style={{ width: "100%" }}>
+                    <button
+                        className='btn text-light mt-2 mb-2'
+                        onClick={() => {
+                            setChartPress((chartPress) => !chartPress);
+                        }}
+                    >
+                        {chartPress ? "Close" : "Open"} Weekly Information
+                    </button>
+                </div>
+                <Chart weekData={weekData} chartPress={chartPress} />
+            </ApolloProvider>
+        )
     );
 }
 
