@@ -1,0 +1,49 @@
+get week data
+    -get useEffect imported
+    -make useState varaible to weekData
+    -make useEffect func active, make inside another func that calls the data
+    -setWeekData to weekData
+    -use the data func to organize every day of the week
+
+
+
+AUFGABEN
+# Junior Front End Test
+A React focused take home test for Junior Front-end Developers.
+
+## Instructions
++ Estimated time for delivery 7 days
++ Complete this exercise and submit a link to a new repo
++ Libraries, frameworks, etc. are up to you
+
+## Requirements
++ Solution should be responsive
++ You can either create your own components and styled them or use a UI framework (i.e. bootstrap, material, chakra UI)
++ Use GraphQL and the data source you can find it [here](https://github.com/konstantinmuenster/graphql-weather-api) or you can use the [online endpoint](https://graphql-weather-api.herokuapp.com/)
++ Show the "current" conditions for Basel:
+  + Location
+  + Current weather description (ie. sunny)
+  + Current temperature
+  + Today's high temperature
+  + Today's low temperature
++ Allow the user to toggle more data in the current conditions area:
+    + Wind Speed
+    + Humidity
+    + Pressure
+    + Sunrise/Sunset Time
++ Show the 7 Day forecast as a multi-line chart (use any charting library you would like.
+  + Y axis should show the High and Low temperature as separate lines
+  + X axis should show 7 days (starting with the "current" day)
+  + The chart should have a tool tip that when activated shows:
+    + Day of the week
+    + High temperature
+    + Low temperature
+    + Weather description (ie. Breezy)
++ __Bonus:__
+    + Lint
+    + Typescript
+    + Tests
+    + Documentation
+    + Cache
+    + SSR (can be in another branch or just conceptual)
+    + Proper use of React hooks
