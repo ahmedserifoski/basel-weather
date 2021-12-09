@@ -1,6 +1,6 @@
 # Basel Weather App
 
-**LIVE LINK:** https://ikea-clone.netlify.app/
+**LIVE LINK:** https://basel-weather.netlify.app/
 
 ## Features
 * Fully responsive (mobile first)
