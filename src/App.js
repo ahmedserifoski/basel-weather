@@ -30,8 +30,11 @@ function App() {
         fetchWeekData();
     }, []);
 
+
     return (
+      weekData && (
         <ApolloProvider client={client}>
+          
             <Overview />
             <div className='text-center' style={{ width: "100%" }}>
                 <button
@@ -40,7 +43,7 @@ function App() {
                         setChartPress((chartPress) => !chartPress);
                     }}
                 >
-                    Display Weekly Information
+                    {chartPress ? "Close" : "Open"} Weekly Information
                 </button>
             </div>
             <Chart
@@ -48,6 +51,7 @@ function App() {
                 chartPress={chartPress}
             />
         </ApolloProvider>
+      )
     );
 }
 
