@@ -30,7 +30,7 @@ export default function Chart({weekData, chartPress}) {
     }
 
     return (
-           chartPress && ( <div  className='chart col-11 col-sm-8 col-lg-6 mx-auto pr-6'>
+           chartPress && ( <div  className='chart col-11 col-sm-8 col-lg-6 mx-auto pr-6 mb-4'>
             <ResponsiveContainer  width="100%" aspect={1.4}>
                     <LineChart
                         width={500}

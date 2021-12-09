@@ -40,7 +40,7 @@ function App() {
                         setChartPress((chartPress) => !chartPress);
                     }}
                 >
-                    Week Info
+                    Display Weekly Information
                 </button>
             </div>
             <Chart
